@@ -1,0 +1,792 @@
+﻿	
+Question : What's th Problem the Functional Programming ?
+Answer -: 
+		1> Reusability 
+		2> Extensibility 
+		3> Simplicity
+		4> Maintainability
+
+	Example : Javascript is Functional Programming Language .
+
+	1> Reusability -: Different copies of some code in both class is Redundant code
+		class clsProduct
+		{
+			private int CalculateCost(int intPerProductCost,int intQty)
+			{
+				return (intPerProductCost*intQty);
+			}
+		}
+
+		class clsProductWithDiscount
+		{
+			private int CalculateCost(int PerProductCost,int Qty)
+			{
+				return (PerProductCost*Qty);
+			}
+		}
+
+	2> Extensibility -: 
+			- New Function created rather than extending 
+			- Extensibility and Simplicity issues
+
+		class clsProduct
+		{
+			private int CalculateCost(int PerProductCost,int Qty)
+			{
+				return (PerProductCost*Qty);
+			}
+		}
+
+		class clsProductWithDiscount
+		{
+			private int CalculateCostInterest(int PerProductCost,int Qty,int Discount)
+			{
+				return (PerProductCost*Qty)-Discount;
+			}
+		}
+
+	Note -: If u want to add new Features to existing function it is not possible in Functional Programming.
+
+----------------------------------------------------------------------------------------------------------------
+
+	Question : Can you Define OOP and 4 principles of OOP ?
+	Answer -: it is design philosopy where we visualize in terms of sustained objects .
+
+	1> Reusability -: Classes and Object
+		- Rather than copy same code create class make object of class and reuse them whenever we want 
+		- Object are created in Memory no physical data created on Harddisk bcoz it create on memory
+
+	2> Extensibility -: Inheritence , aggregation and composition 
+	3> Simplicity -: Abstraction, Encapsulation and Polymorphism
+		- Object is very complex in order to make simple above thing is used to solve the problem 
+
+	4> Maintainability -: All the above 3 combined helps us to maintain the code better .
+
+
+										**** OOPS ****
+	- OOPS contain Following Feauture or pillars {}
+	A] Abstraction
+	B] Encapsulation
+	C] Inheritance 
+	D] Polymorphism
+
+	Note : Remember the word "APIE"
+	A] Abstraction :
+		- Allows complex world to represented in a simplified manner by explosing only the necessary properties.
+		 For instance a color can be abstracted by RGB i.e we can creted many color by  this combination of mixed color
+	Example : Two wheeler : wheel , indicator , mirror , speedmeter , number plate are necessary for user
+
+	B] Encapsulation
+		- Process of Hiding inner details from external world with that making the object interface simple
+		- it is used to provide security by hiding the Business Logic from outside World
+	Example : Two Wheeler : Engine work , internal wire work , mechnism of speedmeter , click horn button sound generated
+
+	Note -: We can Achieve Encapsulation is oops programming by Access Modifier i.e private ,pulic,internal,
+		    protected, internal protected
+
+
+	C] Inheritance :
+		- if you want to acquire the properties of one class to another class by Established the Relationship as 
+		Parent - child . Inside child class we have all properties of parent class plus add new Features 
+		- So we can have a class with just get and set . we can then inherit and create a new specilized class
+		which does database Operations.
+
+	D] Polymorphism :
+		- We want a Object to play different Role depending on different situations .
+		- For instance we can create class which does database operation on SQL Server and Oracle ,
+		Depending on connection String. it will MORPH its role to do SQL operation or Oracle Operations.
+		- Poly means many and MORPH means change or Behaviour
+
+
+
+
+Questions 1: What are classes and Objects ?
+Answer -: 
+	- Classes and Objects adress reusability .
+	- Rather than thinking in terms of Functions thinks in terms of Objects .
+	- A class is simply type of objects. it is blueprint/template/plan that describe the general details of an Objects .
+	- A class is the blueprint from which the individual objects is created 
+	- Object is instance/occurences of class. with the help of object we assign memory to thr member of class.
+	- An Object can be considered a "thing" that can be performe activities used to define the objects's behaviour
+
+Example :
+	public class clsProduct // class
+	{
+		public int getTotalCost(int intQty,int intPerProduct)
+		{
+			return intQty * intPerProduct;
+		}
+
+	}
+	// class used as Object
+	clsProduct obj=new clsProduct();  // object is created
+	int totalCost=obj.getTotalCost(10,100);
+
+
+
+Questions 2: what is Inheritence ?
+Answer -: 
+	- Inheritence address the problem of extensibility .
+	- Parent-child Relationship : 
+			By using the inheritence we can create a child class which has all the qualities of parent plus some extra new qualities 
+		of himself too .
+
+Example -:
+			
+				public int CalculateCost(int intPerProductCost , int intQty)
+				{
+					return (intPerProductCost*intQty);
+				}
+
+				|
+				|-- new Function is created in Functional Programming rather than extending
+				|
+
+				public int CalculateCost(int intPerProductCost,int intQty,int intDiscount)
+				{
+					return (intPerProductCost*intQty)-intDiscount;
+				}
+
+	** In OOPS
+
+		public class clsProduct
+		{
+				public int getTotalCost(int intPerProductCost , int intQty)
+				{
+					return (intPerProductCost*intQty);
+				}
+		}
+		// clsProduct class is extended and clsProductWithDiscount class is created using inheritence
+
+		public class clsProductWithDiscount : clsProduct // colon represent inheritence
+		{
+			public int getTotalCost(int intPerProductCost , int intQty, int intDiscount)
+			{
+					return (intPerProductCost*intQty)-intDiscount;
+			}
+		}
+
+
+
+
+
+Question 3: What is Polymorphism , overloading and overriding and virtual?
+Answer -: 
+	- Address simplicity : 
+		- By using Polymorphism you can have more simplified interfaces and neat code .
+	- Meaning of Polymorphism :
+		- 'poly' means many .'morphism' means forms . its a ability of object to change the behaviour as per situations.
+
+	** Type sof PolyMorphism 
+	1> static Polymorphism : this method is called at compiled time only . Method Overloding is and Example of Static Polymorphism
+	2> dynamic Polymorphism : it is called when at runtime . Dynamic polymorphiem is achieved using inheritence and overriding.
+
+
+Question 4:Can you Explain Encapsulation and Abstractions?
+Answer -:
+	- Encapsulation means hiding complexity . at implementation level
+	- Abstraction means show only necessasary member to user it is used at Design level
+	- Abstraction and Encapsulation both compliment to each other
+
+	Note : We can acheive Encapsulation using Access modifier(define scope of variable) to amke object simple by hide complexity of Object
+	1> private : Only member of class have access .
+	2> public : All member have access in all classess and projects .
+	3> protected : All member in  current class and derived class can access the variable .
+	4> internal  : Only member in current project have access to the elements means inside the project
+	5> protected internal : All member in current project and all members in derived class can access the variable .
+			means inside project and for inherited class
+	Example : create screen customercode and customername are two textboxes and Add button but 
+			validate() for identify the customer and createDBObject() are hide from user
+	when user click Add button user get suceess message
+
+
+	public class Customer
+	{
+		private void Validate()
+		{
+			// validate
+		}
+		public void Add()
+		{
+			Validate(); // method logic is Hide
+			// Add it to the DB
+		}
+	}
+	public class Program
+	{
+		static void Main()
+		{
+			Customer obj=new Customer();
+			obj.Add(); // only need to call Add() not Validate to make object simple
+		}
+	}
+
+
+Question 5: What is abstract class?
+Answer -: 
+	- Abstract class represent base class , and we can not create objects of these class .
+	- you can make use of abstract classes to implement such functionality in c# using the modifier 'abstract' .
+	- An Abstract class means that, no object of this class can be instatiated , but can make derivations of this .
+	- An abstract class can contain either abstract methods or non abstract methods . abstract members do not have any implementation in the
+		abstract class , but the same has to be provided in the derived class .
+	- An abstract class cannot be sealed or a static class .
+	- it is used when u want to increase resuability using inheritence
+
+
+	Note : Difference between virtual vs abstract
+		- abstract method must be implemented inside child class where 
+		- virtual it is not compultion to implement method inside child class
+
+	- An abstract class cannot be sealed class
+	- An abstract method cannot be privat
+	- the acess modifier of the abstract method should be same in both the abstract class and its derived class . if you declared an abstract 
+	method as protected , it should be protected in its derived class . ow , the compiler raise an error .
+	- An abstract method cannot have the virtual modifier . Beacause an abstract method is implicitly virtual .
+	- An Abstract method cannot be static
+
+
+Question 6: Define Interface ? 
+		what is the difference between abstract and interface ?
+Answer :	
+	- What is interface :
+		- interface is contract 
+		1: An interface looks like a class , but has no implementation . it only contains definations of events , indexer , method/properties
+			the reason interfaces only provide definations beacause they are inherited by class and structs ,
+			which must provide an implementations for each interface member defined .
+	- Use :
+		1: They are decoupled 
+		2: Enforce standarizations : 
+				- all developer must use this method name and implement u cannot change to impose standard uniform method name
+				bcause every developer can give any name for method to maintain uniform method or standard interface is used
+				if we dont implement interface method
+		3: interface is nothing but a contract that must be followed :
+			Ex: employee and company both should agreement if company not follwed then employee sues company
+		4: if u want to add new feature withoud modifying old code is done with interface
+			Example : you create one class contain Read() and Update() but in future new customer wants to add Delete() so dont make change in 
+			old interface create new interface and implement in class Example 2
+
+			Ex1:		
+				interface IRead
+				{
+					void read();
+				}
+				interface IUpdate
+				{
+					void update();
+				}
+				class OldCustomer : IRead , IUpdate
+				{
+					public void read()
+					{
+						
+					}
+					public void update()
+					{
+						
+					}
+				}
+
+				Example 2
+
+				interface IRead
+				{
+					void read();
+				}
+				interface IUpdate
+				{
+					void update();
+				}
+				// create new interface
+				interface IDelete
+				{
+					void delete();
+				}
+				class OldCustomer : IRead , IUpdate , IDelete
+				{
+					public void read()
+					{
+						
+					}
+					public void update()
+					{
+						
+					}
+					public void delete()
+					{
+
+					}
+				}
+
+
+		- Interface keyword is used to define interface .
+		- Interface can not have field variable.
+		- Interface can not have implemented functions and methods .
+		- All methods in a interface needs to be implemented .
+		- Interface can be used to implemente Run time Polymorphism
+		- You can implement multiple interface
+		- All interface method are public
+
+
+
+
+
+
+Question 7: difference between abstract class and interface ?
+
+	1:
+		- An abstract class can have abstract method as well as non-abstract method .
+		- In interface add member are implicitly abstract and all the members of the interface must override to its derived class
+		Note : no need to use 'override' keyword.
+
+	2:
+		- Abstract class can have protected parts ,static methos etc.
+		- The member of interface are public with no implementations
+
+	3:
+		- Abstract class can Add more functionality withoud destroying child classes and that were using the old version .i.e
+			we can add non-abstract method in abstract class and no need to must implement in child class
+		-  If u want to add new function it can affected to child classes, due to the necessary implementations of interface methods 
+			to classes .
+
+	4: Defining an abstract class with abstract members has the same effects to defining an interface
+	
+	5:
+		- abstract class is parent class that we cannot create object and the functionality of parent class reuse in child class 
+			using inheritence
+		- we want to maintain uniformilit and standarized your applications.
+
+
+Question 8: What is the use of Shadowing in c#?
+Answer : 
+	- parent class member is completely replaced by the child class
+
+Example : create class Sales contain InvoiceNumber as int butfor future we want alphnumerice character for new customer
+	but old client want only integer data they dont want any changes then use it shadowing not overriding bcoz it change
+	only implementation not return type
+
+
+	- Shadowing replace the complete element of the parent . In simple words it can	change a variable element of parent to method/Function
+	- Shadowing is useful when get a requirement where vocabulary will be same but the data types need to be changed .
+	- Overriding changes implementations while showing replace element with a complete new element only interface vocabulary is same.
+
+
+
+	Note :
+		- Override only changes implementation of Function
+		- Shadowing / Hiding :
+			- change return type and method parameter i.e completely change the element 
+
+	1:Method overlod - same Function with different input signature irrespective of return type
+	2:Method override - same function with different implementation
+	3:Method Hiding - same function name with different return type and different input signature
+
+
+
+Question 9: Can a class implement Interfaces with same method names ?
+Answer -: 
+	- c# does not used Multiple Inheritence so we use Multiple interface
+	- when two interface having same method it is Explicit interface
+	Example :
+
+	interface I1									interface I2
+	{												{
+		method1();										method1();		
+	}												}
+
+	class A: I1,I2
+	{
+		void method1()
+		{
+		}
+	}
+
+	OutPut: Compiled sucessfully
+
+
+											SOLID Principle
+											--------------
+											--------------
+	- SOLID are 5 basic principles which help to create good software architecture . SOLID is an acronym
+
+	1> S stands for SRP(Single Responsibility principle)
+	2> O stands for OCP(Open Closed principle)
+	3> L stands for LSP(Liskov sunstitution principle)
+	4> I stands for ISP(Interface Segregation principle)
+	5> D stands for DIP(Dependency Inversion principle)
+
+
+
+									1> S stands for SRP(Single Responsibility principle)
+									-----------------------------------------------------
+	Example 1:
+
+	public class Customer 
+    {
+        public void Add()
+        {
+            try
+            {
+                // Adds to Customer database
+            }
+            catch (Exception ex)
+            {
+
+                System.IO.File.WriteAllText(@"c:\Error.txt",ex.ToString());
+            }
+        }
+    }
+
+-	here is the Problem this Customer class is doing work which he is not support to do So Customer class do Customer Validations
+	but is also does logging activity
+	
+		spanish proverb: it is not load but the overload that kills
+
+
+- So SRP says that a class should have only one responsibility and not multiple 
+
+Example : create separate class for separate activity to handle error we create separate class
+
+ public class Customer 
+    {
+        public void Add()
+        {
+            try
+            {
+                // Adds to Customer database
+            }
+            catch (Exception ex)
+            {
+
+                ErrorHandler obj = new ErrorHandler();
+                obj.HandleError(ex.ToString());
+            }
+        }
+    }
+    public class ErrorHandler
+    {
+        public void HandleError(string err)
+        {
+            System.IO.File.WriteAllText(@"c:\Error.txt", ex.ToString());
+        }
+    }
+
+
+
+												2> O stands for OCP(Open Closed principle)
+												------------------------------------------
+	- Open for Extension closed for Modification
+	- modification means adding new Functionality
+	Example : Customer having various type i.eplatinum , GoldCustomer, SilverCustomer , accrording to this we decide Discount for product
+
+	- Close the customer class for modifications but it can be extended Open and Closed Principle 
+
+
+	class Customer
+	{
+		private int _custType;
+		public int CustType
+		{
+			get{return _custType;}
+			set{_custType=value;}
+		}
+		public double CalculateDiscount()
+		{
+			if(_custType==1) // GoldCustomer 10 % discount
+			{
+				return 10;
+			}
+			else
+			{
+				return 5;
+			}
+		}
+	}
+
+	- here we some modification create simple class with no discount and make method virtual so u can override inside child class
+
+
+
+public class Customer
+{
+	public virtual double CalculateDiscount() // methos is ready to override
+	{
+		return 0;
+	}
+	public void Add()
+	{
+		try
+		{
+			//Adds the Customer database
+		}
+		catch(Exception ex)
+		{
+			 ErrorHandler obj = new ErrorHandler();
+             obj.HandleError(ex.ToString());
+		}
+	}
+}
+  public class GoldCustomer : simpleCustomer // open for extenstion
+    {
+        public override double CalCulatDiscount()
+        {
+            return base.CalCulatDiscount()+10;
+        }
+    }
+    public class SilverCustomer : simpleCustomer // open for extenstion
+    {
+        public override double CalCulatDiscount()
+        {
+            return base.CalCulatDiscount() + 5;
+        }
+    }
+ public class ErrorHandler
+    {
+        public void HandleError(string err)
+        {
+            System.IO.File.WriteAllText(@"c:\Error.txt", ex.ToString());
+        }
+    }
+
+
+
+												3> L stands for LSP(Liskov sunstitution principle)
+											---------------------------------------------------
+											--------------------------------------------------
+
+		- So LISKOV principle says the parent should easily replace the child objects
+
+		- Here we want to add new Customer i.e EnquiryCustomer who does not buy any product so i want to give only 2 per discount
+		so it is not real customer so i dont want to save data in database so
+Example 3
+ 
+public class Customer // simple Customer
+{
+	public virtual double CalculateDiscount() // methos is ready to override
+	{
+		return 0;
+	}
+	public void Add()
+	{
+		try
+		{
+			//Adds the Customer database
+		}
+		catch(Exception ex)
+		{
+			 ErrorHandler obj = new ErrorHandler();
+             obj.HandleError(ex.ToString());
+		}
+	}
+}
+
+public class Enquiry :  Customer
+{
+	public double CalculateDiscount()
+	{
+		return 2;
+	}
+	public override void Add()
+	{
+		throw new NotImplementedException("For Enquiry Type of Customer !!");
+	}
+}
+
+	-- As per polymorphism rule , My parent customer class Customer can poin to any of its child class object seamlessly i.e GoldCustomer,
+	SilverCustomer without any issue here Enquiry is not real customer so i dont save data in my datavbase so i have create two interface
+	where who is real Customer who buys our product and another just come for Enquiry
+
+	public interface IEnquiry // not real customer
+	{
+		
+	}
+	public interface ICustomer:IEnquiry // real Customer but first they Enquiry
+	{
+		
+	}
+
+	Example 3
+
+  public interface IEnquiry // not real customer
+    {
+        double CalCulatDiscount(); // give little Discount but not save in database
+    }
+
+    public interface ICustomer : IEnquiry // real Customer
+    {
+        void Add(); // give discount and also save in database bcoz they are real customer
+    }
+
+   
+    public class simpleCustomer2 : ICustomer // simple class
+    {
+        public virtual double CalCulatDiscount()
+        {
+            return 0;
+        }
+        public void Add()
+        {
+            try
+            {
+                // Adds to Customer database
+            }
+            catch (Exception ex)
+            {
+
+                ErrorHandler obj = new ErrorHandler();
+                obj.HandleError(ex.ToString());
+            }
+        }
+    }
+    public class EnquiryCustomer2 : IEnquiry
+    {
+        public double CalCulatDiscount()
+        {
+            return 2;
+        }
+    }
+    public class GoldCustomer2 : simpleCustomer2 // open for extenstion
+    {
+        public override double CalCulatDiscount()
+        {
+            return base.CalCulatDiscount() + 10;
+        }
+    }
+    public class SilverCustomer2 : simpleCustomer2 // open for extenstion
+    {
+        public override double CalCulatDiscount()
+        {
+            return base.CalCulatDiscount() + 5;
+        }
+    }
+    public class ErrorHandler2
+    {
+        public void HandleError(string err)
+        {
+            System.IO.File.WriteAllText(@"c:\Error.txt", err);
+        }
+    }
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            List<simpleCustomer2> obj = new List<simpleCustomer2>();
+            obj.Add(new GoldCustomer2());
+            obj.Add(new SilverCustomer2());
+            //obj.Add(new EnquiryCustomer2()); it is not real customer so we not add to memory
+
+            foreach (simpleCustomer2 o in obj)
+            {
+                o.Add();
+            }
+        }
+    }
+
+	
+
+										4> I stands for ISP(Interface Segregation principle)
+										----------------------------------------------------
+										---------------------------------------------------
+
+		In previous example if u want to add new Customer who want to Discount() add to database and also want to read data
+	and old customer satisfy with their old requirement so dont change in old iterface create new interface and add features to that interface
+
+	so here we create IRead interface for neew client class
+	 so we are not update old interface for old client as their work previously 
+	 and new client get those Extra functionality as they need as welll as they get new Functionality
+
+
+	 Note : show only those method to the client which they need
+
+
+
+								5> D stands for DIP(Dependency Inversion principle)
+								---------------------------------------------------
+								---------------------------------------------------
+
+	Example 5
+		- we have different Error handler so we create new interface
+
+
+
+
+	public interface IErrorHandler5 // create interface for handle error
+    {
+        void HandleError(string err);
+    }
+    public class FileErrorHandler5 : IErrorHandler5
+    {
+        public void HandleError(string err)
+        {
+            System.IO.File.WriteAllText(@"c:\Error.txt", err);
+        }
+    }
+    public class EventViwerErrorHandler : IErrorHandler5
+    {
+        public void HandleError(string err)
+        {
+            // handle error in Event Viwer
+        }
+    }
+
+	 public class simpleCustomer5 : ICustomer5  // simple class
+    {
+        private IErrorHandler5 Ierr = new EventViwerErrorHandler(); // pass reference of interface and create object
+        public virtual double CalCulatDiscount()
+        {
+            return 0;
+        }
+        public void Add()
+        {
+            try
+            {
+                // Adds to Customer database
+            }
+            catch (Exception ex)
+            {
+
+                Ierr.HandleError(ex.ToString());
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

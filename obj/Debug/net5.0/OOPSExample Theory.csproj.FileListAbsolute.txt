@@ -1,0 +1,16 @@
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\OOPSExample Theory.csproj.AssemblyReference.cache
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\OOPSExample Theory.GeneratedMSBuildEditorConfig.editorconfig
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\OOPSExample Theory.AssemblyInfoInputs.cache
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\OOPSExample Theory.AssemblyInfo.cs
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\OOPSExample Theory.csproj.CoreCompileInputs.cache
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\bin\Debug\net5.0\OOPSExample Theory.exe
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\bin\Debug\net5.0\OOPSExample Theory.deps.json
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\bin\Debug\net5.0\OOPSExample Theory.runtimeconfig.json
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\bin\Debug\net5.0\OOPSExample Theory.runtimeconfig.dev.json
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\bin\Debug\net5.0\OOPSExample Theory.dll
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\bin\Debug\net5.0\ref\OOPSExample Theory.dll
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\bin\Debug\net5.0\OOPSExample Theory.pdb
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\OOPSExample Theory.dll
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\ref\OOPSExample Theory.dll
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\OOPSExample Theory.pdb
+F:\Questpond\2.c#\C# By Shiv Sir\OOP's Q & A Video series (330 Hrs)\OOPSExample\obj\Debug\net5.0\OOPSExample Theory.genruntimeconfig.cache
