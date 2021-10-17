@@ -566,6 +566,7 @@ public class Customer
 
 		- Here we want to add new Customer i.e EnquiryCustomer who does not buy any product so i want to give only 2 per discount
 		so it is not real customer so i dont want to save data in database so
+
 Example 3
  
 public class Customer // simple Customer
@@ -590,17 +591,17 @@ public class Customer // simple Customer
 
 public class Enquiry :  Customer
 {
-	public double CalculateDiscount()
+	public override double CalculateDiscount()
 	{
 		return 2;
 	}
-	public override void Add()
+	public void Add()// dont save data in database
 	{
 		throw new NotImplementedException("For Enquiry Type of Customer !!");
 	}
 }
 
-	-- As per polymorphism rule , My parent customer class Customer can poin to any of its child class object seamlessly i.e GoldCustomer,
+	-- As per polymorphism rule , My parent customer class Customer can point to any of its child class object seamlessly i.e GoldCustomer,
 	SilverCustomer without any issue here Enquiry is not real customer so i dont save data in my datavbase so i have create two interface
 	where who is real Customer who buys our product and another just come for Enquiry
 
@@ -615,7 +616,7 @@ public class Enquiry :  Customer
 
 	Example 3
 
-  public interface IEnquiry // not real customer
+    public interface IEnquiry // not real customer
     {
         double CalCulatDiscount(); // give little Discount but not save in database
     }
@@ -697,9 +698,9 @@ public class Enquiry :  Customer
 										---------------------------------------------------
 
 		In previous example if u want to add new Customer who want to Discount() add to database and also want to read data
-	and old customer satisfy with their old requirement so dont change in old iterface create new interface and add features to that interface
+	and old customer satisfy with their old requirement so don't change in old interface create new interface and add features to that interface
 
-	so here we create IRead interface for neew client class
+	 so here we create IRead interface for new client class 
 	 so we are not update old interface for old client as their work previously 
 	 and new client get those Extra functionality as they need as welll as they get new Functionality
 
