@@ -6,7 +6,7 @@ Answer -:
 		3> Simplicity
 		4> Maintainability
 
-	Example : Javascript is Functional Programming Language .
+	Example : Javascript is Functional Programming Languages.
 
 	1> Reusability -: Different copies of some code in both class is Redundant code
 		class clsProduct
@@ -81,7 +81,7 @@ Answer -:
 		- it is used to provide security by hiding the Business Logic from outside World
 	Example : Two Wheeler : Engine work , internal wire work , mechnism of speedmeter , click horn button sound generated
 
-	Note -: We can Achieve Encapsulation is oops programming by Access Modifier i.e private ,pulic,internal,
+	Note -: We can Achieve Encapsulation is oops programming by Access Modifier i.e private ,public,internal,
 		    protected, internal protected
 
 
@@ -112,7 +112,7 @@ Answer -:
 Example :
 	public class clsProduct // class
 	{
-		public int getTotalCost(int intQty,int intPerProduct)
+		public int getTotalCost(int intQty,int intPerProduct) // method parameter
 		{
 			return intQty * intPerProduct;
 		}
@@ -120,13 +120,15 @@ Example :
 	}
 	// class used as Object
 	clsProduct obj=new clsProduct();  // object is created
-	int totalCost=obj.getTotalCost(10,100);
+	int totalCost=obj.getTotalCost(10,100); // method argument
 
 
 
 Questions 2: what is Inheritence ?
 Answer -: 
 	- Inheritence address the problem of extensibility .
+	- if you want to acquire the properties of one class to another class by Established the Relationship as 
+		Parent - child . Inside child class we have all properties of parent class plus add new Features 
 	- Parent-child Relationship : 
 			By using the inheritence we can create a child class which has all the qualities of parent plus some extra new qualities 
 		of himself too .
@@ -177,7 +179,7 @@ Answer -:
 	- Meaning of Polymorphism :
 		- 'poly' means many .'morphism' means forms . its a ability of object to change the behaviour as per situations.
 
-	** Type sof PolyMorphism 
+	** Type's of PolyMorphism 
 	1> static Polymorphism : this method is called at compiled time only . Method Overloding is and Example of Static Polymorphism
 	2> dynamic Polymorphism : it is called when at runtime . Dynamic polymorphiem is achieved using inheritence and overriding.
 

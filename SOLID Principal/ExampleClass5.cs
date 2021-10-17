@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -100,25 +100,30 @@ namespace OOPSExample_Theory.SOLID_Principal
         }
     }
     public class EventViwerErrorHandler : IErrorHandler5
-    { 
+    {
+        public void HandleError(string err)
+        {
+            throw new NotImplementedException();
+        }
     }
-    /* public class Program
-     {
-         static void Main(string[] args)
-         {
-             // old 30 Customer
-             ICustomer4 oldcust = new simpleCustomer4();
-             oldcust.Add();
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            // old 30 Customer
+            ICustomer4 oldcust = new simpleCustomer4();
+            oldcust.Add();
 
 
-             // new client 5 Client
-             Iread4 newcust = new NewClient4();
-             newcust.Add();
-             newcust.Read(); // add new features Read()
+            // new client 5 Client
+            Iread4 newcust = new NewClient4();
+            newcust.Add();
+            newcust.Read(); // add new features Read()
 
 
-             Console.ReadKey();
+            Console.ReadKey();
 
-         }
-     }*/
+        }
+    }
 }
+*/
