@@ -190,7 +190,7 @@ Answer -:
 	- Abstraction means show only necessasary member to user it is used at Design level
 	- Abstraction and Encapsulation both compliment to each other
 
-	Note : We can acheive Encapsulation using Access modifier(define scope of variable) to amke object simple by hide complexity of Object
+	Note : We can acheive Encapsulation using Access modifier(define scope of variable) to make object simple by hide complexity of Object
 	1> private : Only member of class have access .
 	2> public : All member have access in all classess and projects .
 	3> protected : All member in  current class and derived class can access the variable .
@@ -232,19 +232,22 @@ Answer -:
 	- An abstract class can contain either abstract methods or non abstract methods . abstract members do not have any implementation in the
 		abstract class , but the same has to be provided in the derived class .
 	- An abstract class cannot be sealed or a static class .
-	- it is used when u want to increase resuability using inheritence
-
-
-	Note : Difference between virtual vs abstract
-		- abstract method must be implemented inside child class where 
-		- virtual it is not compultion to implement method inside child class
-
+	- it is used when you want to increase resuability using inheritence
 	- An abstract class cannot be sealed class
-	- An abstract method cannot be privat
+	- An abstract method cannot be private
 	- the acess modifier of the abstract method should be same in both the abstract class and its derived class . if you declared an abstract 
 	method as protected , it should be protected in its derived class . ow , the compiler raise an error .
 	- An abstract method cannot have the virtual modifier . Beacause an abstract method is implicitly virtual .
 	- An Abstract method cannot be static
+
+
+	Note : Difference between virtual vs abstract
+		- abstract method must be implemented inside child class where 
+		- override keyword must be used to implement abstract class abstract method .
+		- virtual it is not compultion to implement method inside child class
+		- not necessary to use override keyword just give warning use "new" keyword
+
+
 
 
 Question 6: Define Interface ? 
@@ -252,10 +255,12 @@ Question 6: Define Interface ?
 Answer :	
 	- What is interface :
 		- interface is contract 
-		1: An interface looks like a class , but has no implementation . it only contains definations of events , indexer , method/properties
+		1: An interface looks like a class , but has no implementation  i.e only abstract method present.
+			it only contains definations of events , indexer , method/properties
 			the reason interfaces only provide definations beacause they are inherited by class and structs ,
 			which must provide an implementations for each interface member defined .
-	- Use :
+
+	- Use Of Interface:
 		1: They are decoupled 
 		2: Enforce standarizations : 
 				- all developer must use this method name and implement u cannot change to impose standard uniform method name
@@ -264,7 +269,7 @@ Answer :
 		3: interface is nothing but a contract that must be followed :
 			Ex: employee and company both should agreement if company not follwed then employee sues company
 		4: if u want to add new feature withoud modifying old code is done with interface
-			Example : you create one class contain Read() and Update() but in future new customer wants to add Delete() so dont make change in 
+		Example : you create one class contain Read() and Update() but in future new customer wants to add Delete() so don't make change in 
 			old interface create new interface and implement in class Example 2
 
 			Ex1:		
@@ -341,14 +346,14 @@ Question 7: difference between abstract class and interface ?
 		Note : no need to use 'override' keyword.
 
 	2:
-		- Abstract class can have protected parts ,static methos etc.
+		- Abstract class can have protected parts,static methos etc.
 		- The member of interface are public with no implementations
 
 	3:
 		- Abstract class can Add more functionality withoud destroying child classes and that were using the old version .i.e
 			we can add non-abstract method in abstract class and no need to must implement in child class
 		-  If u want to add new function it can affected to child classes, due to the necessary implementations of interface methods 
-			to classes .
+			to classes.
 
 	4: Defining an abstract class with abstract members has the same effects to defining an interface
 	
@@ -362,24 +367,24 @@ Question 8: What is the use of Shadowing in c#?
 Answer : 
 	- parent class member is completely replaced by the child class
 
-Example : create class Sales contain InvoiceNumber as int butfor future we want alphnumerice character for new customer
+Example : create class Sales contain InvoiceNumber as int but for future we want alphnumerice character for new customer
 	but old client want only integer data they dont want any changes then use it shadowing not overriding bcoz it change
 	only implementation not return type
 
 
 	- Shadowing replace the complete element of the parent . In simple words it can	change a variable element of parent to method/Function
 	- Shadowing is useful when get a requirement where vocabulary will be same but the data types need to be changed .
-	- Overriding changes implementations while showing replace element with a complete new element only interface vocabulary is same.
+	- Overriding changes implementations while shadowing replace element with a complete new element only interface vocabulary is same.
 
 
 
 	Note :
 		- Override only changes implementation of Function
 		- Shadowing / Hiding :
-			- change return type and method parameter i.e completely change the element 
+			- change return type and method parameter i.e completely change the element with new element
 
 	1:Method overlod - same Function with different input signature irrespective of return type
-	2:Method override - same function with different implementation
+	2:Method override - same function and same input sifnature , and return type with different implementation
 	3:Method Hiding - same function name with different return type and different input signature
 
 
@@ -478,7 +483,7 @@ Example : create separate class for separate activity to handle error we create 
 												------------------------------------------
 	- Open for Extension closed for Modification
 	- modification means adding new Functionality
-	Example : Customer having various type i.eplatinum , GoldCustomer, SilverCustomer , accrording to this we decide Discount for product
+	Example : Customer having various type i.e platinum , GoldCustomer, SilverCustomer , accrording to this we decide Discount for product
 
 	- Close the customer class for modifications but it can be extended Open and Closed Principle 
 
@@ -510,7 +515,7 @@ Example : create separate class for separate activity to handle error we create 
 
 public class Customer
 {
-	public virtual double CalculateDiscount() // methos is ready to override
+	public virtual double CalculateDiscount() // methods is ready to override
 	{
 		return 0;
 	}
@@ -556,6 +561,8 @@ public class Customer
 											--------------------------------------------------
 
 		- So LISKOV principle says the parent should easily replace the child objects
+		- The Liskov Substitution Principle in practical software development. The principle defines that 
+		objects of a superclass shall be replaceable with objects of its subclasses without breaking the application.
 
 		- Here we want to add new Customer i.e EnquiryCustomer who does not buy any product so i want to give only 2 per discount
 		so it is not real customer so i dont want to save data in database so
