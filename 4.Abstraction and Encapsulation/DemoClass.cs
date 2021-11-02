@@ -50,6 +50,7 @@ namespace OOPSExample_Theory._4.Abstraction_and_Encapsulation
             perProductCost = Convert.ToDouble(Console.ReadLine());
             
         }
+        // Make Encapsulation
         private bool IsQuantityGreater(int intQty) // Hide Business Logic
         {
             if(intQty > 1000)
@@ -61,6 +62,7 @@ namespace OOPSExample_Theory._4.Abstraction_and_Encapsulation
                 return false;
             }
         }
+        // Make Encapsulation
         private bool isProductCostZero(double PerProductCost) //Hide Business Logic
         {
             if(PerProductCost==0)

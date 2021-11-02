@@ -52,18 +52,18 @@ namespace OOPSExample_Theory._3.Polymorphism._3._2Function_Overring
             Console.WriteLine("PerProduct is :" + PerProduct);
             Console.WriteLine("intDiscount is :" + Discount);
         }
-        /*static void Main()
+      /*  static void Main()
         {
             clsProductWithDiscount obj1 = new clsProductWithDiscount();
             obj1.ReadData();
 
             if (obj1.Discount == 0) // compile time polymorphism
             {
-                Console.WriteLine(obj1.getTotalCost(obj1.Qty, obj1.PerProduct,"INR").ToString());
+                Console.WriteLine(obj1.getTotalCost(obj1.Qty, obj1.PerProduct, "INR").ToString());
             }
             else
             {
-                Console.WriteLine(obj1.getTotalCost(obj1.Qty, obj1.PerProduct,"INR").ToString());
+                Console.WriteLine(obj1.getTotalCost(obj1.Qty, obj1.PerProduct, "INR").ToString());
             }
             obj1.Display();
             Console.ReadKey();

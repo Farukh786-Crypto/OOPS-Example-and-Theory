@@ -35,21 +35,21 @@ namespace OOPSExample_Theory._3.Polymorphism._3._1Function_overloading
             Console.WriteLine("PerProduct is :" + PerProduct);
             Console.WriteLine("intDiscount is :" + intDiscount);
         }
-        /*static void Main()
+       /* static void Main()
         {
             clsProductClass3 obj1 = new clsProductClass3();
             obj1.ReadData();
 
             if (obj1.intDiscount == 0) // compile time polymorphism
             {
-                int total1= obj1.getTotalCost(obj1.intQty, obj1.PerProduct);// will invoke calculation of total cost without discount
-                Console.WriteLine("Toal of :"+total1);
+                int total1 = obj1.getTotalCost(obj1.intQty, obj1.PerProduct);// will invoke calculation of total cost without discount
+                Console.WriteLine("Toal of :" + total1);
             }
             else
             {
                 // will invoke calculation of total cost with discount
                 int total2 = obj1.getTotalCost(obj1.intQty, obj1.PerProduct, obj1.intDiscount);
-                Console.WriteLine("total :"+total2);
+                Console.WriteLine("total :" + total2);
             }
             obj1.Display();
             Console.ReadKey();

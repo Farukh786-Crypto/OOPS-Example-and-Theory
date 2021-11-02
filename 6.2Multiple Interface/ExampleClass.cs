@@ -27,7 +27,7 @@ namespace OOPSExample_Theory._6._2Multiple_Interface
         }
     }
 
-    /*class ExampleClass
+   /* class ExampleClass
     {
         static void Main(string[] args)
         {

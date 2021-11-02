@@ -8,7 +8,7 @@ namespace OOPSExample_Theory._5.Abstract_class
 {
     abstract class DB
     {
-        public abstract void Connect();
+        public abstract void Connect(); // abstract method no method implementation logic only initialization
         public string DBIpAddress()
         {
             return "10.10.1.1";
@@ -16,7 +16,7 @@ namespace OOPSExample_Theory._5.Abstract_class
     }
     class SQLServer : DB
     {
-        public override void Connect()
+        public override void Connect() // abstract method must be implemented inside child class
         {
             Console.WriteLine("This method will connect to SQL Server !!");
         }
@@ -38,7 +38,7 @@ namespace OOPSExample_Theory._5.Abstract_class
             db1.Connect();
 
             DB db2 = new Oracle();
-            db1.Connect();
+            db2.Connect();
             Console.ReadKey();
         }
     }*/

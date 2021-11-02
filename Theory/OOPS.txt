@@ -96,15 +96,19 @@ Answer -:
 		- For instance we can create class which does database operation on SQL Server and Oracle ,
 		Depending on connection String. it will MORPH its role to do SQL operation or Oracle Operations.
 		- Poly means many and MORPH means change or Behaviour
+-		- Example is Operator overloading :
+			str1="Farukh" + "Shaikh"  -: Farukh Shaikh  (string concantenation occur at runtime)
+			str1 = 1 + 4 -: 5 (Arithmetic operation occur at runtime)
+		Note -:  polymorphism is oocur
 
 
 
 
 Questions 1: What are classes and Objects ?
 Answer -: 
-	- Classes and Objects adress reusability .
+	- Classes and Objects address reusability .
 	- Rather than thinking in terms of Functions thinks in terms of Objects .
-	- A class is simply type of objects. it is blueprint/template/plan that describe the general details of an Objects .
+	- A class is simply type of objects. it is blueprint/template/plan that describe the general details of a data .
 	- A class is the blueprint from which the individual objects is created 
 	- Object is instance/occurences of class. with the help of object we assign memory to thr member of class.
 	- An Object can be considered a "thing" that can be performe activities used to define the objects's behaviour
@@ -116,7 +120,6 @@ Example :
 		{
 			return intQty * intPerProduct;
 		}
-
 	}
 	// class used as Object
 	clsProduct obj=new clsProduct();  // object is created
@@ -180,8 +183,10 @@ Answer -:
 		- 'poly' means many .'morphism' means forms . its a ability of object to change the behaviour as per situations.
 
 	** Type's of PolyMorphism 
-	1> static Polymorphism : this method is called at compiled time only . Method Overloding is and Example of Static Polymorphism
-	2> dynamic Polymorphism : it is called when at runtime . Dynamic polymorphiem is achieved using inheritence and overriding.
+	1> static Polymorphism\Early Binding\Method Overloading : 
+		- this method is called at compiled time only . Method Overloding is and Example of Static Polymorphism
+	2> dynamic Polymorphism\ Late Binding \ Method Overriding :
+		- it is called when at runtime . Dynamic polymorphiem is achieved using inheritence and overriding.
 
 
 Question 4:Can you Explain Encapsulation and Abstractions?
@@ -257,18 +262,19 @@ Answer :
 		- interface is contract 
 		1: An interface looks like a class , but has no implementation  i.e only abstract method present.
 			it only contains definations of events , indexer , method/properties
-			the reason interfaces only provide definations beacause they are inherited by class and structs ,
+			the reason interfaces only provide definations beacause they are inherited by class 
 			which must provide an implementations for each interface member defined .
 
 	- Use Of Interface:
-		1: They are decoupled 
+		1: They are decoupled by using dynamic polymorphism
 		2: Enforce standarizations : 
-				- all developer must use this method name and implement u cannot change to impose standard uniform method name
+				- all developer must use this method name and implement you cannot change to impose standard uniform method name
 				bcause every developer can give any name for method to maintain uniform method or standard interface is used
 				if we dont implement interface method
 		3: interface is nothing but a contract that must be followed :
-			Ex: employee and company both should agreement if company not follwed then employee sues company
-		4: if u want to add new feature withoud modifying old code is done with interface
+			Ex: employee and company both should agreement if any company not follwed then employee sues company
+		4: Multiple Inheritnce : we can achieve with interface using explicit interface type .
+		5: ISP(Interface Segregation Principle) -: if u want to add new feature withoud modifying old code is done with interface
 		Example : you create one class contain Read() and Update() but in future new customer wants to add Delete() so don't make change in 
 			old interface create new interface and implement in class Example 2
 
@@ -334,10 +340,6 @@ Answer :
 		- All interface method are public
 
 
-
-
-
-
 Question 7: difference between abstract class and interface ?
 
 	1:
@@ -346,7 +348,7 @@ Question 7: difference between abstract class and interface ?
 		Note : no need to use 'override' keyword.
 
 	2:
-		- Abstract class can have protected parts,static methos etc.
+		- Abstract class can have protected parts,static methods etc.
 		- The member of interface are public with no implementations
 
 	3:
@@ -360,7 +362,10 @@ Question 7: difference between abstract class and interface ?
 	5:
 		- abstract class is parent class that we cannot create object and the functionality of parent class reuse in child class 
 			using inheritence
-		- we want to maintain uniformilit and standarized your applications.
+		- we want to maintain uniformility and standarized your applications.
+
+	Note : if all method inside abstract class are abstract method then it becomes interface but it can not satisfy condition of multiple inheritence .
+	it can only achieve by interface .
 
 
 Question 8: What is the use of Shadowing in c#?
@@ -384,7 +389,7 @@ Example : create class Sales contain InvoiceNumber as int but for future we want
 			- change return type and method parameter i.e completely change the element with new element
 
 	1:Method overlod - same Function with different input signature irrespective of return type
-	2:Method override - same function and same input sifnature , and return type with different implementation
+	2:Method override - same function and same input signature , and return type with different implementation
 	3:Method Hiding - same function name with different return type and different input signature
 
 
@@ -414,6 +419,7 @@ Answer -:
 											--------------
 											--------------
 	- SOLID are 5 basic principles which help to create good software architecture . SOLID is an acronym
+	- Design patteren is time tested solution for oops Environment problem
 
 	1> S stands for SRP(Single Responsibility principle)
 	2> O stands for OCP(Open Closed principle)
@@ -532,14 +538,14 @@ public class Customer
 		}
 	}
 }
-  public class GoldCustomer : simpleCustomer // open for extenstion
+  public class GoldCustomer : simpleCustomer // open for extention
     {
         public override double CalCulatDiscount()
         {
             return base.CalCulatDiscount()+10;
         }
     }
-    public class SilverCustomer : simpleCustomer // open for extenstion
+    public class SilverCustomer : simpleCustomer // open for extention
     {
         public override double CalCulatDiscount()
         {
@@ -712,6 +718,8 @@ public class Enquiry :  Customer
 								5> D stands for DIP(Dependency Inversion principle)
 								---------------------------------------------------
 								---------------------------------------------------
+
+	- Instead of Creating object with new keyword just pass object reference to the constrctor of class and create object outside which make your application loosely couple
 
 	Example 5
 		- we have different Error handler so we create new interface

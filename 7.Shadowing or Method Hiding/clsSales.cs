@@ -20,7 +20,7 @@ namespace OOPSExample_Theory._7.Shadowing_or_Method_Hiding
         static void Main(string[] args)
         {
             // for old Client
-            clsSales obj1=new clsSales();
+            clsSales obj1 = new clsSales();
             obj1.InvoiceNumber = 12;
 
             // for new Client
