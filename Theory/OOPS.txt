@@ -9,7 +9,7 @@ Answer -:
 	Example : Javascript is Functional Programming Languages.
 
 	1> Reusability -: Different copies of some code in both class is Redundant code
-		class clsProduct
+		class  clsProduct
 		{
 			private int CalculateCost(int intPerProductCost,int intQty)
 			{
@@ -74,12 +74,12 @@ Answer -:
 	A] Abstraction :
 		- Allows complex world to represented in a simplified manner by explosing only the necessary properties.
 		 For instance a color can be abstracted by RGB i.e we can creted many color by  this combination of mixed color
-	Example : Two wheeler : wheel , indicator , mirror , speedmeter , number plate are necessary for user
+	Example : Two wheeler : wheel , indicator , Break, Handle, mirror , speedmeter , number plate are necessary for user
 
 	B] Encapsulation
 		- Process of Hiding inner details from external world with that making the object interface simple
 		- it is used to provide security by hiding the Business Logic from outside World
-	Example : Two Wheeler : Engine work , internal wire work , mechnism of speedmeter , click horn button sound generated
+	Example : Two Wheeler : Engine work , internal wire work , mechanism of speedmeter , click horn button sound generated
 
 	Note -: We can Achieve Encapsulation is oops programming by Access Modifier i.e private ,public,internal,
 		    protected, internal protected
@@ -110,7 +110,7 @@ Answer -:
 	- Rather than thinking in terms of Functions thinks in terms of Objects .
 	- A class is simply type of objects. it is blueprint/template/plan that describe the general details of a data .
 	- A class is the blueprint from which the individual objects is created 
-	- Object is instance/occurences of class. with the help of object we assign memory to thr member of class.
+	- Object is instance/occurences of class. with the help of object we assign memory to their member of class.
 	- An Object can be considered a "thing" that can be performe activities used to define the objects's behaviour
 
 Example :
@@ -151,12 +151,12 @@ Example -:
 				{
 					return (intPerProductCost*intQty)-intDiscount;
 				}
-
+	
 	** In OOPS
 
 		public class clsProduct
 		{
-				public int getTotalCost(int intPerProductCost , int intQty)
+				public int getTotalCost(int intPerProductCost,int intQty)
 				{
 					return (intPerProductCost*intQty);
 				}
@@ -173,8 +173,6 @@ Example -:
 
 
 
-
-
 Question 3: What is Polymorphism , overloading and overriding and virtual?
 Answer -: 
 	- Address simplicity : 
@@ -186,7 +184,10 @@ Answer -:
 	1> static Polymorphism\Early Binding\Method Overloading : 
 		- this method is called at compiled time only . Method Overloding is and Example of Static Polymorphism
 	2> dynamic Polymorphism\ Late Binding \ Method Overriding :
+		- Reimplementation of parent class in child class is done using virtual and override keyword .
 		- it is called when at runtime . Dynamic polymorphiem is achieved using inheritence and overriding.
+		- Method overrdiing return type and input signature are same or exactly match .
+		- if we dont use override then use new keyword
 
 
 Question 4:Can you Explain Encapsulation and Abstractions?
@@ -265,14 +266,20 @@ Answer :
 			the reason interfaces only provide definations beacause they are inherited by class 
 			which must provide an implementations for each interface member defined .
 
+	Note : Interface class contain byDefault abstract method so dont use 'abstract' keyword and also implementation dont use
+			'override' keyword
+
 	- Use Of Interface:
 		1: They are decoupled by using dynamic polymorphism
 		2: Enforce standarizations : 
 				- all developer must use this method name and implement you cannot change to impose standard uniform method name
-				bcause every developer can give any name for method to maintain uniform method or standard interface is used
+				because every developer can give any name for method to maintain uniform method or standard interface is used
 				if we dont implement interface method
+
 		3: interface is nothing but a contract that must be followed :
+			- When both class does not have any relation but they want to follow some rule using interface
 			Ex: employee and company both should agreement if any company not follwed then employee sues company
+
 		4: Multiple Inheritnce : we can achieve with interface using explicit interface type .
 		5: ISP(Interface Segregation Principle) -: if u want to add new feature withoud modifying old code is done with interface
 		Example : you create one class contain Read() and Update() but in future new customer wants to add Delete() so don't make change in 
@@ -333,7 +340,7 @@ Answer :
 
 		- Interface keyword is used to define interface .
 		- Interface can not have field variable.
-		- Interface can not have implemented functions and methods .
+		- Interface can not have implemented functions and methods beacuase they are bydefault abstract method.
 		- All methods in a interface needs to be implemented .
 		- Interface can be used to implemente Run time Polymorphism
 		- You can implement multiple interface
@@ -357,14 +364,17 @@ Question 7: difference between abstract class and interface ?
 		-  If u want to add new function it can affected to child classes, due to the necessary implementations of interface methods 
 			to classes.
 
-	4: Defining an abstract class with abstract members has the same effects to defining an interface
+	4: Defining an abstract class with abstract members has the same effects to defining an interface 
+		but we cannot acheive Multiple inheritence 
+		so that time only interface is used 
 	
 	5:
 		- abstract class is parent class that we cannot create object and the functionality of parent class reuse in child class 
 			using inheritence
 		- we want to maintain uniformility and standarized your applications.
 
-	Note : if all method inside abstract class are abstract method then it becomes interface but it can not satisfy condition of multiple inheritence .
+	Note : if all method inside abstract class are abstract method then it becomes interface but it can not satisfy condition of 
+	multiple inheritence .
 	it can only achieve by interface .
 
 
@@ -376,6 +386,9 @@ Example : create class Sales contain InvoiceNumber as int but for future we want
 	but old client want only integer data they dont want any changes then use it shadowing not overriding bcoz it change
 	only implementation not return type
 
+
+	Ex: old client invoice number is used Adhar card Number(which contain only Number) and New Client want PAN Card Number
+	(contain Alphanumeric characters)
 
 	- Shadowing replace the complete element of the parent . In simple words it can	change a variable element of parent to method/Function
 	- Shadowing is useful when get a requirement where vocabulary will be same but the data types need to be changed .
@@ -419,7 +432,7 @@ Answer -:
 											--------------
 											--------------
 	- SOLID are 5 basic principles which help to create good software architecture . SOLID is an acronym
-	- Design patteren is time tested solution for oops Environment problem
+	- Design patteren is time tested solution for oops Environment problem : singleton , publisher/subscriber , DI , Repositery patteren
 
 	1> S stands for SRP(Single Responsibility principle)
 	2> O stands for OCP(Open Closed principle)
@@ -489,7 +502,8 @@ Example : create separate class for separate activity to handle error we create 
 												------------------------------------------
 	- Open for Extension closed for Modification
 	- modification means adding new Functionality
-	Example : Customer having various type i.e platinum , GoldCustomer, SilverCustomer , accrording to this we decide Discount for product
+	Example : Customer having various type i.e platinum , GoldCustomer, SilverCustomer , 
+	accrording to this we decide Discount for product
 
 	- Close the customer class for modifications but it can be extended Open and Closed Principle 
 
@@ -577,7 +591,7 @@ Example 3
  
 public class Customer // simple Customer
 {
-	public virtual double CalculateDiscount() // methos is ready to override
+	public virtual double CalculateDiscount() // method is ready to override
 	{
 		return 0;
 	}
@@ -608,7 +622,7 @@ public class Enquiry :  Customer
 }
 
 	-- As per polymorphism rule , My parent customer class Customer can point to any of its child class object seamlessly i.e GoldCustomer,
-	SilverCustomer without any issue here Enquiry is not real customer so i dont save data in my datavbase so i have create two interface
+	SilverCustomer without any issue here Enquiry is not real customer so i dont save data in my database so i have create two interface
 	where who is real Customer who buys our product and another just come for Enquiry
 
 	public interface IEnquiry // not real customer
@@ -719,7 +733,8 @@ public class Enquiry :  Customer
 								---------------------------------------------------
 								---------------------------------------------------
 
-	- Instead of Creating object with new keyword just pass object reference to the constrctor of class and create object outside which make your application loosely couple
+	- Instead of Creating object with new keyword just pass object reference to the constrctor of class and
+	create object outside which make your application loosely couple
 
 	Example 5
 		- we have different Error handler so we create new interface

@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace OOPSExample_Theory._3.Polymorphism._3._2Function_Overring
 {
     class clsProductClass4
-    {
-        
+    {        
         public int getTotalCost(int qty,int PerProduct)
         {
             return qty * PerProduct;
@@ -26,12 +25,11 @@ namespace OOPSExample_Theory._3.Polymorphism._3._2Function_Overring
         public int Qty;
         public int PerProduct;
         public int Discount;
-        // override kwyword is necessasry to define new implementations
+        // override keyword is necessasry to define new implementations
         public override string getTotalCost(int Qty, int PerProduct, string strCurrency)
         {
             return "The Total cost with Discount of 10% :" + getTotalCost(Qty, PerProduct, 10).ToString() +
-                " " + strCurrency;
-            
+                " " + strCurrency;       
         }
         public int getTotalCost(int qty, int PerProduct,int Discount)
         {

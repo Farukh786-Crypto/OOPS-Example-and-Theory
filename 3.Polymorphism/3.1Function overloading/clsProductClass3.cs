@@ -16,6 +16,8 @@ namespace OOPSExample_Theory._3.Polymorphism._3._1Function_overloading
             return intQty1 * intPerProduct1;
         }
         // method having same name but different input signatures
+
+        // Note : it doesnt care about return type only input signatures
         public int getTotalCost(int intQty1, int intPerProduct1,int intDiscount1)
         {
             return (intQty1 * intPerProduct1)-intDiscount1;

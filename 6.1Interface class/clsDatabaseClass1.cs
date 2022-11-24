@@ -12,7 +12,6 @@ namespace OOPSExample_Theory._6.Interface_class
     }
     public class clsSQLServer : IDB
     {
-       
         public void Update()
         {
             Console.WriteLine("Sql Server Update method !!");
