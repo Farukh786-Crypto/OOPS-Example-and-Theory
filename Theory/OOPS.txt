@@ -76,6 +76,10 @@ Answer -:
 		 For instance a color can be abstracted by RGB i.e we can creted many color by  this combination of mixed color
 	Example : Two wheeler : wheel , indicator , Break, Handle, mirror , speedmeter , number plate are necessary for user
 
+	Note -: Abstraction can be achieve in two ways
+	       a] Abstract class
+		   b] Interface
+
 	B] Encapsulation
 		- Process of Hiding inner details from external world with that making the object interface simple
 		- it is used to provide security by hiding the Business Logic from outside World
