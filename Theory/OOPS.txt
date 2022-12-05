@@ -582,7 +582,7 @@ public class Customer
 
 
 
-												3> L stands for LSP(Liskov sunstitution principle)
+												3> L stands for LSP(Liskov substitution principle)
 											---------------------------------------------------
 											--------------------------------------------------
 
