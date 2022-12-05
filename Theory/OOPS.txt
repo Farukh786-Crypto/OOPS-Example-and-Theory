@@ -377,7 +377,7 @@ Question 7: difference between abstract class and interface ?
 	5:
 		- abstract class is parent class that we cannot create object and the functionality of parent class reuse in child class 
 			using inheritence
-		- we want to maintain uniformility and standarized your applications.
+		- we want to maintain uniformility and standarized your applications in interface.
 
 	Note : if all method inside abstract class are abstract method then it becomes interface but it can not satisfy condition of 
 	multiple inheritence .
