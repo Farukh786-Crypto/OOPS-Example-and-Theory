@@ -91,6 +91,8 @@ Answer -:
 		- So we can have a class with just get and set . we can then inherit and create a new specilized class
 		which does database Operations.
 
+		Note: we cannot acces the private member of parent class in child class
+
 	D] Polymorphism :
 		- We want a Object to play different Role depending on different situations .
 		- For instance we can create class which does database operation on SQL Server and Oracle ,
@@ -99,7 +101,7 @@ Answer -:
 -		- Example is Operator overloading :
 			str1="Farukh" + "Shaikh"  -: Farukh Shaikh  (string concantenation occur at runtime)
 			str1 = 1 + 4 -: 5 (Arithmetic operation occur at runtime)
-		Note -:  polymorphism is oocur
+		Note -:  polymorphism is occur
 
 
 
